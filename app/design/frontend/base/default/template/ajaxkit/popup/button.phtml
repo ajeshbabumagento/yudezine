@@ -1,0 +1,36 @@
+<?php
+
+$text = '';
+$html_attributes = $this->getAttributes();
+
+if ($this->getText())
+{
+    $text = $this->getText();
+}
+else
+{
+    switch($this->getType())
+    {
+        case "to_cart_button":
+            $text = $this->__('Go To Cart');
+            break;
+
+        case "to_checkout_button":
+            $text = $this->__('Go To Checkout');
+            break;
+
+        case "continue_shopping_button":
+            $text = $this->__('Continue Shopping');
+            break;
+    }
+}
+?>
+<button class="<?php echo $html_attributes['class']; ?>"<?php echo $html_attributes['system']; ?>><?php echo $text; ?></button>
+
+<?php if ($this->getTimer()) { ?>
+    <div>
+        <?php echo $this->__('Will be closed in'); ?>
+        <span class="close-popup-timer"><?php echo (int)$this->getTimer(); ?></span>
+        <?php echo $this->__('sec'); ?>
+    </div>
+<?php } ?>

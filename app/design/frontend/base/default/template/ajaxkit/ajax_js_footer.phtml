@@ -1,0 +1,7 @@
+<?php
+$used_js_css = array();
+Mage::getModel('ajaxKit/updateLayout')->getLayoutJsCss($used_js_css);
+?>
+<script type='text/javascript'>//<![CDATA[
+    AjaxKitConfig['main']['js_css'] = JSON.parse(' <?php echo Mage::helper('core')->jsonEncode($used_js_css); ?> ');
+// ]]></script>

@@ -1,0 +1,77 @@
+
+<div >
+    <div class="popup-overlay close-popup-overlay"></div>
+    <div class="close-popup" ><?php echo $this->__('Close'); ?></div>
+    <div class="popup-content" id="ajaxkit-popup-content">
+
+
+        <?php if ($this->getProduct()) { ?>
+            <?php echo $this->getProduct()->getName(); ?>
+        <?php }  ?>
+
+        <?php if ($this->getContentHtml()) { ?>
+            <?php echo $this->getContentHtml(); ?>
+        <?php }  ?>
+
+
+        <?php if ($this->getJsonConfig()) { ?>
+            <?php echo $this->getJsonConfig(); ?>
+        <?php }  ?>
+
+        <?php if ($this->getBundlePrices()) { ?>
+            <div style="display:none;">
+                <?php echo $this->getBundlePrices(); ?>
+            </div>
+        <?php }  ?>
+
+        <?php if ($this->getQuickProductView()) { ?>
+            <div style="display:none;">
+                <?php echo $this->getQuickProductView(); ?>
+            </div>
+        <?php }  ?>
+
+
+
+        <?php if ($this->getProductInfoGroupedHtml()) { ?>
+            <div class="popup-product-info-grouped">
+                <?php echo $this->getProductInfoGroupedHtml(); ?>
+            </div>
+        <?php } ?>
+
+        <?php if ($this->getProductInfoOptionsWrapperHtml()) { ?>
+            <div class="popup-product-info-options-wrapper">
+                <?php echo $this->getProductInfoOptionsWrapperHtml(); ?>
+            </div>
+        <?php } ?>
+
+        <?php if ($this->getRelatedProductsHtml()) { ?>
+            <div class="popup-related-products">
+                <?php echo $this->getRelatedProductsHtml(); ?>
+            </div>
+        <?php } ?>
+
+        <?php if ($this->getProductInfoOptionsWrapperBottomHtml()) { ?>
+            <div class="popup-product-info-options-wrapper-bottom">
+                <?php echo $this->getProductInfoOptionsWrapperBottomHtml(); ?>
+            </div>
+        <?php } ?>
+
+        <?php if ($this->isHaveProductList()) { ?>
+            <div class="popup-added-product-list">
+                <?php echo $this->getPopupContent(); ?>
+            </div>
+
+        <?php }
+        else
+        {
+            echo $this->getChild('info_text')->toHtml();
+        }
+        ?>
+
+        <?php if ($this->getOkBtn()) { ?>
+            <div class="popup-text">
+                <button class="close-popup"><?php echo $this->__('Ok'); ?></button>
+            </div>
+        <?php } ?>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<?php if(!$this->isEnabled()) {   return false; } ?>
+<div class="quick-view-container">
+    <button
+         type="button"
+         title="<?php echo $this->__('QV') ?>"
+        <?php echo $this->getAttributes(); ?>
+         class="button <?php echo $this->getClass(); ?>">
+
+            <span>
+                <span>
+                    <?php echo $this->__('QV') ?>
+                </span>
+            </span>
+    </button>
+
+    <div class="quick-view-data-container">
+    </div>
+
+</div>
+
+<style type="text/css">
+
+</style>
+

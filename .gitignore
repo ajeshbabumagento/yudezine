@@ -1,6 +1,7 @@
 .htaccess.sample
 .modgit/
 .modman/
+
 var/
 
 # =========================

@@ -1,0 +1,23 @@
+<div>
+    <table>
+    <?php
+    $products = $this->getProductCollection();
+    if ($products)
+    {
+        foreach ($products AS $product)
+        {
+            $html = "<tr>";
+            $html .= '<td><img src="'. $this->helper('catalog/image')->init($product, 'small_image')->resize(135) .'" alt="'.$product->getImageLabel().'" ></td>';
+            $html .= '<td>'.$product->getName().'</td>';
+            $html .= "</tr>";
+            echo $html;
+        }
+    }
+    ?>
+    </table>
+</div>
+
+
+
+
+
