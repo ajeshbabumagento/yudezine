@@ -27,13 +27,13 @@
 			<span class="title-cart clearfix">
 					<span class="top-cart-icon">
 					<?php
-						echo ($cartIco ? '<span class="cart-full-indicator"></span><span class="cart-indicator"></span><i class="meigee-bag" title="'. $this->__('Shopping Cart') .'"></i>' : '');
+						echo ($cartIco ? '<span class="cart-full-indicator"></span><span class="cart-indicator"></span><i class="fa fa-shopping-cart" aria-hidden="true" title="'. $this->__('Shopping Cart') .'"></i>' : '');
 					?>
 					</span>
 					<?php
 					echo (($cartLabel || $cartCounter || $cartPrice) ? '<span class="cart-right-items">' : '');
 					// echo ($cartType ? '</span><span class="right pull-right"><span class="top">' : '');
-					echo ($cartLabel ? '<span class="top-cart-label">' . $this->__('Shopping Cart') . '</span>' : '');
+					echo ($cartLabel ? '<span class="top-cart-label">' . $this->__('Cart') . '</span>' : '');
 					echo ($cartCounter ? '<span class="cart-qty">'. $_cartQty .' / </span>' : '');
 					echo ($cartPrice ? '<span class="subtotal">'. Mage::helper('checkout')->formatPrice($this->getSubtotal()) .'</span>' : '');
 					// echo ($cartType ? '</span><span class="bottom">' : '');
