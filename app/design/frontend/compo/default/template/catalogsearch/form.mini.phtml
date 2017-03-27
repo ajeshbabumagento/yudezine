@@ -28,7 +28,7 @@ $random = rand(1, 1000);
 				<div id="search_autocomplete_<?php echo $random; ?>" class="search-autocomplete"></div>
 				<script type="text/javascript">
 				//<![CDATA[
-					var searchForm = new Varien.searchForm('search_mini_form_<?php echo $random; ?>', 'search_<?php echo $random; ?>', '<?php echo Mage::helper('core')->jsQuoteEscape($this->__('Search entire store here...')); ?>');
+					var searchForm = new Varien.searchForm('search_mini_form_<?php echo $random; ?>', 'search_<?php echo $random; ?>', '<?php echo Mage::helper('core')->jsQuoteEscape($this->__('eg.  sofa, chairs, table...')); ?>');
 					searchForm.initAutocomplete('<?php echo $catalogSearchHelper->getSuggestUrl() ?>', 'search_autocomplete_<?php echo $random; ?>');
 				//]]>
 				</script>
