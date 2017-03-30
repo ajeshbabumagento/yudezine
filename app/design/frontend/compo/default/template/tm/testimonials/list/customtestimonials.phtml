@@ -1,0 +1,32 @@
+
+<?php
+$_testimonials = Mage::helper('testimonials')->getHomepageTestimonials();
+//$_width = Mage::helper('testimonials')->getImageWidth();
+//$_height = Mage::helper('testimonials')->getImageHeight();
+?>
+
+<?php if ($_testimonials->getSize()): ?>
+    <div class="col-sm-12">
+        <div class="testimonials-block text-center">
+            <div class="pg-head">
+                <h2>Testimonials</h2>
+            </div>
+            <div class="testimonials clearfix">
+                <?php foreach ($_testimonials as $_testimonial): ?>
+                    <div class="item col-md-3 text-center">
+                        <?php 
+                            $image = Mage::helper('testimonials')->getImagePath($_testimonial);
+                        ?>
+                        <img src="<?php echo Mage::helper('testimonials/image')->
+                    init($image)->resize(110, 108); ?>" class="img-responsive" alt="" title="" />
+                        <div class="item-tile">
+                            <h4><?php echo $_testimonial->getName(); ?></h4>
+                            <p><?php echo $_testimonial->getMessage(); ?></p>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+
+            </div>
+        </div>
+    </div>
+<?php endif; ?>
