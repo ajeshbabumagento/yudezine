@@ -31,16 +31,21 @@
 					?>
 					</span>
 					<?php
+                                        if($cartCounter){
+                                            $_cartQty=$_cartQty;
+                                        }else{
+                                            $_cartQty='';
+                                        }
 					echo (($cartLabel || $cartCounter || $cartPrice) ? '<span class="cart-right-items">' : '');
 					// echo ($cartType ? '</span><span class="right pull-right"><span class="top">' : '');
-					echo ($cartLabel ? '<span class="top-cart-label">' . $this->__('Cart') . '</span>' : '');
-					echo ($cartCounter ? '<span class="cart-qty">'. $_cartQty .' / </span>' : '');
-					echo ($cartPrice ? '<span class="subtotal">'. Mage::helper('checkout')->formatPrice($this->getSubtotal()) .'</span>' : '');
+					echo ($cartLabel ? '<span class="top-cart-label">' . $this->__('Cart') .'('.$_cartQty.')</span>' : '');
+					//echo ($cartCounter ? '<span class="cart-qty">('. $_cartQty .')  </span>' : '');
+				//	echo ($cartPrice ? '<span class="subtotal">'. Mage::helper('checkout')->formatPrice($this->getSubtotal()) .'</span>' : '');
 					// echo ($cartType ? '</span><span class="bottom">' : '');
 					// echo ( '</span>' : '');
 					// echo ($cartType ? '</span></span>' : '');
-					echo (($cartLabel || $cartCounter || $cartPrice) ? '<i class="caret"></i>' : '');
-					echo (($cartLabel || $cartCounter || $cartPrice) ? '</span>' : '');
+					//echo (($cartLabel || $cartCounter || $cartPrice) ? '<i class="caret"></i>' : '');
+					//echo (($cartLabel || $cartCounter || $cartPrice) ? '</span>' : '');
 					echo ''; ?>
 			</span>
 		</a>

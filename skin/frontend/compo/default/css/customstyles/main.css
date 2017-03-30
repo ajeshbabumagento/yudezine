@@ -3220,3 +3220,6 @@ form {
   border: none;
   padding: 10px 0;
 }
+.wide-header .navbar-collapse{
+     margin-left: 452px;
+}
