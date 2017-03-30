@@ -44,6 +44,7 @@
                     <a href="#" class="btn btn-love"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
                     <!--<button type="button" class="btn btn-cart" data-toggle="modal" data-target="#myModal"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;&nbsp;<span>Cart (2)</span></button>-->    
                     <?php echo $this->getChildHtml('cart_sidebar'); ?>
+                    <?php //echo $this->getLayout()->createBlock('core/template')->setTemplate('page/html/mobile_menu.phtml')->toHtml(); ?>
                     <?php //echo $this->getChildHtml('topMenu'); ?>
                     </div>
 
@@ -56,3 +57,5 @@
 	<?php echo $this->getChildHtml('meigee_loader'); ?>
 	<?php echo $this->getChildHtml('before_content'); ?>
 </div>
+<?php echo $this->getLayout()->createBlock('core/template')->setTemplate('page/html/mobile_menu.phtml')->toHtml(); ?>
+<?php echo $this->getChildHtml('topMenu'); ?>
